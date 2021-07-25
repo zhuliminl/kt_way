@@ -1,0 +1,2 @@
+rootProject.name = "kt_way"
+include ':app'
