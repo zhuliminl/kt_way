@@ -60,6 +60,9 @@ dependencies {
     kapt "com.android.databinding:compiler:3.2.0-alpha10"
     kapt "androidx.databinding:databinding-common:4.1.0"
 
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.todkars:shimmer-recyclerview:0.4.1'
+
 
 
 
