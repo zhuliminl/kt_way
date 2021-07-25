@@ -19,13 +19,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // 获取控制器
         navController = findNavController(R.id.navHostFragment)
+        // 设定页面配置
         val appBarConfiguration : AppBarConfiguration = AppBarConfiguration(setOf(
             R.id.recipesFragment,
             R.id.favoriteRecipesFragment,
             R.id.foodJokesFragment ))
 
+        // 绑定底部视图和控制器
         bottomNavigationView.setupWithNavController(navController)
+
+        // 绑定动作，连接到页面配置
         setupActionBarWithNavController(navController, appBarConfiguration)
 //
     }
