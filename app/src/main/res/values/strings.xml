@@ -2,4 +2,7 @@
     <string name="app_name">kt_way</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipies_frament">菜单</string>
+    <string name="favorite_recipes_fragment">喜爱</string>
+    <string name="food_joke">玩笑</string>
 </resources>
