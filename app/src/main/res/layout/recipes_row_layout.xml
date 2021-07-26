@@ -1,31 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recipesRowLayout"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/row_cardView"
-        android:layout_marginHorizontal="10dp"
         android:layout_width="0dp"
-        android:layout_height="250dp"
-        app:strokeColor="@color/lightGray"
-        app:strokeWidth="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/lightGray"
+        app:strokeWidth="1dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/green"
-            >
+            android:layout_height="wrap_content"
+            android:background="@color/green">
 
+            <ImageView
+                android:id="@+id/recipes_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/title_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:fontFamily="cursive"
+                android:maxLines="2"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toEndOf="@+id/recipes_imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/desc_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:alpha="0.8"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="随着 React Native 在前端业界规模性的应用越来越多，各大厂也对其渲染性能越来越看重。
+渲染性能的主要评判指标是FMP与TTI，在 React Native 以跨平台前端框架身份逐步替代 Native 原生界面的同时，两者的渲染性能对比也逐渐浮出水面。
+同时，渲染性能调优在业内已存在许多可借鉴的经验，而在项目实践的过程中，往往能体验到现"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_textView"
+                app:layout_constraintStart_toStartOf="@+id/title_textView"
+                app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+            <ImageView
+                android:id="@+id/heart_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/desc_textView"
+                app:layout_constraintVertical_bias="0.195"
+                app:srcCompat="@drawable/ic_love"
+                app:tint="@color/red"
+                tools:layout_editor_absoluteX="152dp" />
+
+            <TextView
+                android:id="@+id/heart_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="100"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/heart_imageView"
+                app:layout_constraintStart_toStartOf="@+id/heart_imageView"
+                app:layout_constraintTop_toBottomOf="@+id/heart_imageView" />
+
+            <ImageView
+                android:id="@+id/clock_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toEndOf="@+id/heart_imageView"
+                app:layout_constraintTop_toTopOf="@+id/heart_imageView"
+                app:srcCompat="@drawable/ic_clock"
+                app:tint="@color/yellow" />
+
+            <TextView
+                android:id="@+id/clock_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="1"
+                android:textColor="@color/yellow"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/clock_imageView"
+                app:layout_constraintStart_toStartOf="@+id/clock_imageView"
+                app:layout_constraintTop_toBottomOf="@+id/clock_imageView" />
+
+            <ImageView
+                android:id="@+id/eva_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toEndOf="@+id/clock_imageView"
+                app:layout_constraintTop_toTopOf="@+id/clock_imageView"
+                app:srcCompat="@drawable/ic_eco" />
+
+            <TextView
+                android:id="@+id/eva_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="333"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/eva_imageView"
+                app:layout_constraintStart_toStartOf="@+id/eva_imageView"
+                app:layout_constraintTop_toBottomOf="@+id/eva_imageView" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
