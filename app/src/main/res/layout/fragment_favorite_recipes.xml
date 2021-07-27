@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGray"
-    tools:context=".favoriteRecipesFragment">
+    tools:context=".ui.fragment.favorite.favoriteRecipesFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

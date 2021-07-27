@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.example.kt_way.recipesFragment"
+        android:name="com.example.kt_way.ui.fragment.recipes.recipesFragment"
         android:label="fragment_recipes"
         tools:layout="@layout/fragment_recipes" />
     <fragment
         android:id="@+id/favoriteRecipesFragment"
-        android:name="com.example.kt_way.favoriteRecipesFragment"
+        android:name="com.example.kt_way.ui.fragment.favorite.favoriteRecipesFragment"
         android:label="fragment_favorite_recipes"
         tools:layout="@layout/fragment_favorite_recipes" />
     <fragment
         android:id="@+id/foodJokesFragment"
-        android:name="com.example.kt_way.favoriteRecipesFragment"
+        android:name="com.example.kt_way.ui.fragment.favorite.favoriteRecipesFragment"
         android:label="fragment_food_jokes"
         tools:layout="@layout/fragment_favorite_recipes" />
 </navigation>

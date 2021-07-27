@@ -1,4 +1,4 @@
-package com.example.kt_way
+package com.example.kt_way.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.kt_way.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 //import kotlinx.android.
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration : AppBarConfiguration = AppBarConfiguration(setOf(
             R.id.recipesFragment,
             R.id.favoriteRecipesFragment,
-            R.id.foodJokesFragment ))
+            R.id.foodJokesFragment
+        ))
 
         // 绑定底部视图和控制器
         bottomNavigationView.setupWithNavController(navController)
