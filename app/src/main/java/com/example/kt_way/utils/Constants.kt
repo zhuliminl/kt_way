@@ -1,4 +1,4 @@
-package com.example.kt_way
+package com.example.kt_way.utils
 
 class Constants {
     companion object {
