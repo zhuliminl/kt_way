@@ -36,6 +36,7 @@
                 android:background="@color/green">
 
                 <ImageView
+                    loadImageFromUrl="@{reuslt.image}"
                     android:id="@+id/recipes_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,9 +74,7 @@
                     android:alpha="0.8"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="随着 React Native 在前端业界规模性的应用越来越多，各大厂也对其渲染性能越来越看重。
-渲染性能的主要评判指标是FMP与TTI，在 React Native 以跨平台前端框架身份逐步替代 Native 原生界面的同时，两者的渲染性能对比也逐渐浮出水面。
-同时，渲染性能调优在业内已存在许多可借鉴的经验，而在项目实践的过程中，往往能体验到现"
+                    android:text="@{reuslt.title}"
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/title_textView"
@@ -89,13 +88,14 @@
                     android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
 
+                    app:layout_constraintStart_toStartOf="@+id/desc_textView"
                     app:layout_constraintTop_toBottomOf="@+id/desc_textView"
                     app:layout_constraintVertical_bias="0.195"
                     app:srcCompat="@drawable/ic_love"
-                    app:tint="@color/red"
-                    tools:layout_editor_absoluteX="152dp" />
+                    app:tint="@color/red" />
 
                 <TextView
+                    setNumberOfLikes="@{reuslt.aggregateLikes}"
                     android:id="@+id/heart_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -118,6 +118,7 @@
                     app:tint="@color/yellow" />
 
                 <TextView
+                    setNumberOfMinutes="@{reuslt.readyInMinutes}"
                     android:id="@+id/clock_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,6 +131,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/clock_imageView" />
 
                 <ImageView
+                    applyVeganColor="@{reuslt.vegan}"
                     android:id="@+id/eva_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -139,6 +141,7 @@
                     app:srcCompat="@drawable/ic_eco" />
 
                 <TextView
+                    applyVeganColor="@{reuslt.vegan}"
                     android:id="@+id/eva_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
