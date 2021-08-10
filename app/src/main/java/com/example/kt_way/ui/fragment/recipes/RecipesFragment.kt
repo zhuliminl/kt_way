@@ -19,7 +19,7 @@ class recipesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_recipes, container, false)
-        view.shimmer_recycler_view.showShimmer();
+//        view.shimmer_recycler_view.showShimmer();
         return view
     }
 

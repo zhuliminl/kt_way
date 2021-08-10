@@ -11,4 +11,5 @@ interface FoodRecipesApi {
     suspend fun getRecipes(
         @QueryMap queries: Map<String, String>
     ): Response<FoodRecipe>
+
 }
