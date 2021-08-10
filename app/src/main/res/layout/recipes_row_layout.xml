@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="reuslt"
+            name="result"
             type="com.example.kt_way.models.Result" />
     </data>
 
@@ -36,7 +36,7 @@
                 android:background="@color/green">
 
                 <ImageView
-                    loadImageFromUrl="@{reuslt.image}"
+                    loadImageFromUrl="@{result.image}"
                     android:id="@+id/recipes_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     android:alpha="0.8"
                     android:ellipsize="end"
                     android:maxLines="2"
-                    android:text="@{reuslt.title}"
+                    android:text="@{result.title}"
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="@+id/title_textView"
@@ -95,7 +95,7 @@
                     app:tint="@color/red" />
 
                 <TextView
-                    setNumberOfLikes="@{reuslt.aggregateLikes}"
+                    setNumberOfLikes="@{result.aggregateLikes}"
                     android:id="@+id/heart_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                     app:tint="@color/yellow" />
 
                 <TextView
-                    setNumberOfMinutes="@{reuslt.readyInMinutes}"
+                    setNumberOfMinutes="@{result.readyInMinutes}"
                     android:id="@+id/clock_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/clock_imageView" />
 
                 <ImageView
-                    applyVeganColor="@{reuslt.vegan}"
+                    applyVeganColor="@{result.vegan}"
                     android:id="@+id/eva_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                     app:srcCompat="@drawable/ic_eco" />
 
                 <TextView
-                    applyVeganColor="@{reuslt.vegan}"
+                    applyVeganColor="@{result.vegan}"
                     android:id="@+id/eva_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
