@@ -8,8 +8,10 @@ import androidx.lifecycle.AndroidViewModel
 import com.example.kt_way.data.Repository
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.kt_way.models.FoodRecipe
 import com.example.kt_way.utils.NetworkResult
+import kotlinx.coroutines.launch
 import retrofit2.Response
 
 
@@ -18,6 +20,10 @@ class MainViewModel @ViewModelInject constructor(
 ) : AndroidViewModel(application) {
 
     var recipesResponse: MutableLiveData<NetworkResult<FoodRecipe>> = MutableLiveData()
+    fun getRecipes(queries: Map<String, String>) = viewModelScope.launch {
+        getRecipesSafeCall(queries)
+    }
+
 
     // 获取 recipes response 的值
     private suspend fun getRecipesSafeCall(queries: Map<String, String>) {
